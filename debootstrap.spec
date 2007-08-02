@@ -7,6 +7,7 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://ftp.debian.org/debian/pool/main/d/debootstrap/%{name}_%{version}.tar.bz2
+Source1: devices.tar.gz
 License: MIT
 Group: System/Configuration/Packaging
 Url: http://packages.debian.org/unstable/admin/debootstrap
@@ -21,8 +22,10 @@ them into a directory which can eventually be chrooted into.
 %prep
 %setup -q -n %{name}
 perl -pi -e 's/ -o root -g root//' Makefile
+perl -pi -e 's/^(all:.*?)(\S+.tar.gz\s*)+/$1/g' Makefile
 perl -pi -e 's,%{_prefix}/lib/%{name},$1%{_libdir}/%{name},' Makefile %{name}
 perl -pi -e 's,qw\(%{_prefix}/lib /lib\),qw\(%{_libdir} /%{_lib}\),' functions
+cp %{SOURCE1} .
 
 %build
 %make
