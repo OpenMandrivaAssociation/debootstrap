@@ -25,6 +25,7 @@ perl -pi -e 's,%{_prefix}/lib/%{name},$1%{_libdir}/%{name},' Makefile %{name}
 perl -pi -e 's,qw\(%{_prefix}/lib /lib\),qw\(%{_libdir} /%{_lib}\),' functions
 
 %build
+%make
 
 %install
 rm -rf %{buildroot}
