@@ -11,6 +11,7 @@ Source1: devices.tar.gz
 License: MIT
 Group: System/Configuration/Packaging
 Url: http://packages.debian.org/unstable/admin/debootstrap
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 debootstrap is used to create a Debian base system from scratch,
