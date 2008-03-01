@@ -1,12 +1,12 @@
 %define name debootstrap
-%define version 1.0.1
+%define version 1.0.8
 %define release %mkrel 1
 
 Summary: Bootstrap a basic Debian system
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://ftp.debian.org/debian/pool/main/d/debootstrap/%{name}_%{version}.tar.bz2
+Source0: http://ftp.debian.org/debian/pool/main/d/debootstrap/%{name}_%{version}.tar.gz
 Source1: devices.tar.gz
 License: MIT
 Group: System/Configuration/Packaging
