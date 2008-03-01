@@ -33,6 +33,7 @@ cp %{SOURCE1} .
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+install -D -m 644 %{name}.8 %{buildroot}%{_mandir}/man8/%{name}.8
 
 %clean
 rm -rf %{buildroot}
