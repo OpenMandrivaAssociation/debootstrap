@@ -43,4 +43,4 @@ rm -rf %{buildroot}
 %doc TODO
 %{_sbindir}/%{name}
 %{_datadir}/%{name}
-%{_mandir}/man8/debootstrap.8*
+%{_mandir}/man8/%{name}.8*
