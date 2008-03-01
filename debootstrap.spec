@@ -24,7 +24,6 @@ them into a directory which can eventually be chrooted into.
 perl -pi -e 's/ -o root -g root//' Makefile
 perl -pi -e 's/^(\s+)(chown.*)$/$1#$2/g' Makefile
 perl -pi -e 's/^(all:.*?)(\S+.tar.gz)$/$1/g' Makefile
-perl -pi -e 's,%{_prefix}/lib/%{name},$1%{_libdir}/%{name},' Makefile %{name}
 perl -pi -e 's,qw\(%{_prefix}/lib /lib\),qw\(%{_libdir} /%{_lib}\),' functions
 cp %{SOURCE1} .
 
@@ -42,5 +41,5 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc TODO
 %{_sbindir}/%{name}
-%{_libdir}/%{name}
+%{_datadir}/%{name}
 %{_mandir}/man8/debootstrap.8*
