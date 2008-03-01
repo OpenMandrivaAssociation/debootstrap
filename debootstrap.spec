@@ -32,7 +32,7 @@ cp %{SOURCE1} .
 
 %install
 rm -rf %{buildroot}
-%make install-arch DESTDIR=%{buildroot}
+%makeinstall_std
 
 %clean
 rm -rf %{buildroot}
