@@ -1,6 +1,6 @@
 %define name debootstrap
-%define version 1.0.19
-%define release %mkrel 2
+%define version 1.0.28
+%define release %mkrel 1
 
 Summary: Bootstrap a basic Debian system
 Name: %{name}
