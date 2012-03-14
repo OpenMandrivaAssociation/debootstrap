@@ -1,6 +1,6 @@
 %define name debootstrap
-%define version 1.0.38
-%define release %mkrel 1
+%define version 1.0.39
+%define release 1
 
 Summary: Bootstrap a basic Debian system
 Name: %{name}
@@ -11,7 +11,6 @@ Source1: devices.tar.gz
 License: MIT
 Group: System/Configuration/Packaging
 Url: http://packages.debian.org/unstable/admin/debootstrap
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 debootstrap is used to create a Debian base system from scratch,
@@ -20,7 +19,7 @@ downloading .deb files from a mirror site, and carefully unpacking
 them into a directory which can eventually be chrooted into.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 perl -pi -e 's/ -o root -g root//' Makefile
 perl -pi -e 's/^(\s+)(chown.*)$/$1#$2/g' Makefile
 perl -pi -e 's/^(all:.*?)(\S+.tar.gz)$/$1/g' Makefile
@@ -31,15 +30,10 @@ cp %{SOURCE1} .
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 install -D -m 644 %{name}.8 %{buildroot}%{_mandir}/man8/%{name}.8
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc TODO
 %{_sbindir}/%{name}
 %{_datadir}/%{name}
