@@ -1,5 +1,6 @@
+%define debug_package	%nil
 %define name debootstrap
-%define version 1.0.39
+%define version 1.0.44
 %define release 1
 
 Summary: Bootstrap a basic Debian system
