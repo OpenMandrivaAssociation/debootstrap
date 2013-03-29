@@ -1,3 +1,4 @@
 sources:
-  "devices.tar.gz": 7c5c74f93869ee69de8297cb9fdb1d0fcb7627f1
   debootstrap_1.0.45.tar.gz: 1abb485313a8faa4f8d3837b7a49bdd7c304a00e
+  debootstrap_1.0.47.tar.gz: 9a02c00dd4dbf3a5414d2dcfb26c3662a36e0c91
+  devices.tar.gz: 7c5c74f93869ee69de8297cb9fdb1d0fcb7627f1
