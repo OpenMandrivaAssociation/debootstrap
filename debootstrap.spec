@@ -1,17 +1,14 @@
 %define debug_package	%nil
-%define name debootstrap
-%define version 1.0.47
-%define release 1
 
-Summary: Bootstrap a basic Debian system
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Source0: http://ftp.debian.org/debian/pool/main/d/debootstrap/%{name}_%{version}.tar.gz
-Source1: devices.tar.gz
-License: MIT
-Group: System/Configuration/Packaging
-Url: http://packages.debian.org/unstable/admin/debootstrap
+Summary:	Bootstrap a basic Debian system
+Name:		debootstrap
+Version:	1.0.49
+Release:	1
+Source0:	http://ftp.debian.org/debian/pool/main/d/debootstrap/%{name}_%{version}.tar.gz
+Source1:	devices.tar.gz
+License:	MIT
+Group:		System/Configuration/Packaging
+Url:		http://packages.debian.org/unstable/admin/debootstrap
 
 %description
 debootstrap is used to create a Debian base system from scratch,
@@ -20,7 +17,7 @@ downloading .deb files from a mirror site, and carefully unpacking
 them into a directory which can eventually be chrooted into.
 
 %prep
-%setup -q
+%setup -q -n %{name}
 perl -pi -e 's/ -o root -g root//' Makefile
 perl -pi -e 's/^(\s+)(chown.*)$/$1#$2/g' Makefile
 perl -pi -e 's/^(all:.*?)(\S+.tar.gz)$/$1/g' Makefile
