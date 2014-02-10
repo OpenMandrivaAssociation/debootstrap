@@ -2,9 +2,9 @@
 
 Summary:	Bootstrap a basic Debian system
 Name:		debootstrap
-Version:	1.0.56
+Version:	1.0.57
 Release:	1
-Source0:	http://ftp.debian.org/debian/pool/main/d/debootstrap/%{name}_%{version}.tar.gz
+Source0:	http://ftp.debian.org/debian/pool/main/d/debootstrap/%{name}_%{version}.tar.xz
 Source1:	devices.tar.gz
 License:	MIT
 Group:		System/Configuration/Packaging
