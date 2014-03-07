@@ -2,13 +2,14 @@
 
 Summary:	Bootstrap a basic Debian system
 Name:		debootstrap
-Version:	1.0.57
+Version:	1.0.59
 Release:	1
 Source0:	http://ftp.debian.org/debian/pool/main/d/debootstrap/%{name}_%{version}.tar.xz
 Source1:	devices.tar.gz
 License:	MIT
 Group:		System/Configuration/Packaging
 Url:		http://packages.debian.org/unstable/admin/debootstrap
+BuildArch:	noarch
 
 %description
 debootstrap is used to create a Debian base system from scratch,

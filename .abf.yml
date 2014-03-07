@@ -6,4 +6,5 @@ sources:
   debootstrap_1.0.55.tar.gz: cb6b022f6fb4b2f6ac54ffa997d911198bafc67d
   debootstrap_1.0.56.tar.gz: fdb8ae5993bc12e16c6d28d04e76cf669783e6df
   debootstrap_1.0.57.tar.xz: 3b1c2ce4f3efb629b61e386adf95fa62f09fa194
+  debootstrap_1.0.59.tar.xz: 979db3eb0295ce7f66d3ae16547a1af2e562f8f6
   devices.tar.gz: 7c5c74f93869ee69de8297cb9fdb1d0fcb7627f1
