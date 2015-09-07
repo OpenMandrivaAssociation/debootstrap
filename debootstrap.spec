@@ -3,9 +3,10 @@
 Summary:	Bootstrap a basic Debian system
 Name:		debootstrap
 Version:	1.0.71
-Release:	2
+Release:	3
 Source0:	http://ftp.debian.org/debian/pool/main/d/debootstrap/%{name}_%{version}.tar.gz
 Source1:	devices.tar.gz
+Source2:	ubuntu-archive-keyring.gpg
 License:	MIT
 Group:		System/Configuration/Packaging
 Url:		http://packages.debian.org/unstable/admin/debootstrap
@@ -31,9 +32,12 @@ cp %{SOURCE1} .
 %install
 %makeinstall_std
 install -D -m 644 %{name}.8 %{buildroot}%{_mandir}/man8/%{name}.8
+mkdir -p %{buildroot}%{_datadir}/keyrings/
+install -m 644 %{SOURCE2} %{buildroot}%{_datadir}/keyrings/
 
 %files
 %doc TODO
 %{_sbindir}/%{name}
 %{_datadir}/%{name}
+%{_datadir}/keyrings/ubuntu-archive-keyring.gpg
 %{_mandir}/man8/%{name}.8*
