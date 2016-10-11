@@ -2,7 +2,7 @@
 
 Summary:	Bootstrap a basic Debian system
 Name:		debootstrap
-Version:	1.0.83
+Version:	1.0.84
 Release:	1
 Source0:	http://ftp.debian.org/debian/pool/main/d/debootstrap/%{name}_%{version}.tar.gz
 Source1:	devices.tar.gz
@@ -19,7 +19,7 @@ downloading .deb files from a mirror site, and carefully unpacking
 them into a directory which can eventually be chrooted into.
 
 %prep
-%setup -qn %{name}
+%setup -q
 perl -pi -e 's/ -o root -g root//' Makefile
 perl -pi -e 's/^(\s+)(chown.*)$/$1#$2/g' Makefile
 perl -pi -e 's/^(all:.*?)(\S+.tar.gz)$/$1/g' Makefile
