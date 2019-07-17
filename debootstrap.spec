@@ -2,8 +2,8 @@
 
 Summary:	Bootstrap a basic Debian system
 Name:		debootstrap
-Version:	1.0.100
-Release:	2
+Version:	1.0.115
+Release:	1
 Source0:	http://ftp.debian.org/debian/pool/main/d/debootstrap/%{name}_%{version}.tar.gz
 Source1:	devices.tar.gz
 Source2:	ubuntu-archive-keyring.gpg
