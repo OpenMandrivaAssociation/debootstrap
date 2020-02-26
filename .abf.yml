@@ -1,4 +1,4 @@
 sources:
-  debootstrap_1.0.116.tar.gz: 23893a5c614365ee8bad1d775c8cde8e8300679f
+  debootstrap_1.0.118.tar.gz: cb29c00ce3a3469c3789154e1116760676c1b142
   devices.tar.gz: 7c5c74f93869ee69de8297cb9fdb1d0fcb7627f1
   ubuntu-archive-keyring.gpg: 33eb330c0640b1300709bc19f1cd0c9509379038
