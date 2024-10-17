@@ -9,7 +9,7 @@ Source1:	devices.tar.gz
 Source2:	ubuntu-archive-keyring.gpg
 License:	MIT
 Group:		System/Configuration/Packaging
-Url:		http://packages.debian.org/unstable/admin/debootstrap
+Url:		https://packages.debian.org/unstable/admin/debootstrap
 BuildArch:	noarch
 
 %description
